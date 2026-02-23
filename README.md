@@ -55,7 +55,7 @@ failures
 
 ### Prerequisites
 
-* Python 3.14.2+
+* Python 3.12
 * paho-mqtt
 * Mosquitto MQTT Broker
 
