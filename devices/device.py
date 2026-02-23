@@ -65,7 +65,7 @@ class VirtualDevice:
         self.client.loop_stop()
 
     def simulate_network_recovery(self):
-        print(f"[{self.device_id}] ✅ Network link restored!")
+        print(f"[{self.device_id}] : Network link restored!")
         self.client.loop_start() # Restart the background network thread
         self._timer = threading.Timer(3.0, self.publish_loop)
         self._timer.start()
