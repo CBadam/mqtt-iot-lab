@@ -60,15 +60,30 @@ failures
 * Mosquitto MQTT Broker
 
 ### Installation
-``` bash
-git clone https://github.com/YOUR_USERNAME/mqtt-iot-lab.git
-cd mqtt-iot-lab
 
-python -m venv venv
-venv\Scripts\activate   # Windows
+1. Download Mosquitto at https://mosquitto.org/download/:
 
-pip install -r requirements.txt
-```
+    Install it (default options are fine):
+    * ✔ Install as service
+    * ✔ Install client tools
+
+2. Clone the repo
+    ```sh
+    git clone https://github.com/YOUR_USERNAME/mqtt-iot-lab.git
+    ```
+3. Access the repo
+    ```sh
+    cd mqtt-iot-lab
+    ```
+4. Create and activate a virtual environment
+    ```sh
+    python -m venv venv
+    venv\Scripts\activate  
+    ```
+5. Install requirements
+    ```sh
+    pip install -r requirements.txt
+    ```
 
 
 
