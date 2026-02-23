@@ -1,13 +1,15 @@
-import threading
 import time
 from devices.device import VirtualDevice
 
-def run_device(device_id):
-    device = VirtualDevice(device_id)
+if __name__ == "__main__":
+    # No manual threading.Thread calls here!
+    devices = [VirtualDevice(f"device_{i}") for i in range(5)]
 
-    while device.battery > 0:
-        device.publish()
-        time.sleep(3)
-
-for i in range(5):
-    threading.Thread(target=run_device, args=(f"device_{i}",)).start()
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("\nShutting down devices...")
+        for dev in devices:
+            dev.stop()
+        print("All clear. Goodbye!")
