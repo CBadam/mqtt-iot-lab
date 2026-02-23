@@ -61,26 +61,30 @@ failures
 
 ### Installation
 
-1. Download Mosquitto at https://mosquitto.org/download/:
+1. Download Mosquitto at https://mosquitto.org/download/.
 
-    Install it (default options are fine):
-    * ✔ Install as service
-    * ✔ Install client tools
+2. Install Mosquitto with the default configuration.
 
-2. Clone the repo
+    When choosing components, make sure to check Service.
+
+3. Add the installation directory (default: C:\Program Files\Mosquitto) to the system environment variables.
+
+4. Go to windows services and find "Mosquitto Broker" and check if startup type is automatic.
+
+5. Clone the repo
     ```sh
     git clone https://github.com/YOUR_USERNAME/mqtt-iot-lab.git
     ```
-3. Access the repo
+6. Access the repo
     ```sh
     cd mqtt-iot-lab
     ```
-4. Create and activate a virtual environment
+7. Create and activate a virtual environment
     ```sh
     python -m venv venv
     venv\Scripts\activate  
     ```
-5. Install requirements
+8. Install requirements
     ```sh
     pip install -r requirements.txt
     ```
