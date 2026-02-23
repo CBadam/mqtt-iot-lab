@@ -1,6 +1,6 @@
 import threading
 import time
-from devices.devices import VirtualDevice
+from devices.device import VirtualDevice
 
 def run_device(device_id):
     device = VirtualDevice(device_id)
